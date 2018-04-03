@@ -13,3 +13,8 @@ for i in range(dep - 2):
     arr.append(num)
 
 print(arr)
+
+def fibonacci(n):
+    fib=lambda n:1 if n<=2 else fib(n-1)+fib(n-2)
+    for i in range(1,n+1):
+        print(fib(i))
