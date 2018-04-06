@@ -31,3 +31,35 @@ for g in arr:
     if ('a-x' in g) or ('c-z' in g) or ('c-x' in g):
         continue
     print(g)
+    
+    
+    
+    
+    
+    
+    
+    
+team1=['a','b','c']
+team2=['x','y','z']
+
+
+#排列组合
+def com():
+    arr=[]
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                if i==j or i==k or j==k:
+                    continue
+                c1=team1[0]+'--'+team2[i]
+                c2=team1[1]+'--'+team2[j]
+                c3=team1[2]+'--'+team2[k]
+                arr.append(list([c1,c2,c3]))
+    return arr
+    
+#筛选
+ 
+for x in com():
+    if 'a--x' in x or 'c--x' in x or 'c--z'in x:
+        continue
+    print(x)
